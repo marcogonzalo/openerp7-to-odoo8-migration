@@ -9,7 +9,8 @@ Este módulo no requiere instalación. Sólo debe descargarse en el directorio d
 ## Cómo usarlo
 Cada clase posee una consulta SQL para obtener la información del modelo a importar, conectándose a la base de datos anterior. Luego de obtener todos los datos asociados necesarios, se procede a asignarlos a su campo correspondiente en el modelo de la nueva versión. De este modo Odoo se encarga de ejecutar todos los procesos secundarios asociados al procesamiento de los datos y la generación de los datos complementarios en las demás tablas vinculadas.
 
-Los códigos de migración se invocan por medio de un comando desde la cónsola mediante la siguiente sintaxis: 
+Los códigos de migración se invocan por medio de un comando desde la cónsola mediante la siguiente sintaxis:
+
 `/ruta-a/odoo/bin/odoo.py < comando > -c /ruta-a/openerp-server.conf`
 
 Ejecutar los comandos de migración en el siguiente orden:
@@ -26,8 +27,7 @@ Ejecutar los comandos de migración en el siguiente orden:
 10. importsaleorderline (importa los productos asociados a las órdenes de ventas y presupuestos)
 11. importaccountinvoice (importa las facturas y sus líneas de factura, generando el movimiento asociado y el número de factura, cuando corresponde)
 
-
-
+------------------------------------
 
 # Module for migrate from OpenERP 7 to Odoo 8
 It is a module I have developed to migrate an OpenERP 7 database to Odoo 8. It is not an automated tool for migrations but a series of migration scripts.
@@ -36,9 +36,10 @@ It is a module I have developed to migrate an OpenERP 7 database to Odoo 8. It i
 This module doesn't need installation. You only have to download it to your Odoo 8 addons folder.
 
 ## How to use it
-Each class have a SQL query to get module data in OpenERP 7 database. When it has all necessary attributes data, matches them to the respective fields in Odoo 8 module, executing on background all secondary actions associated to data processing, like an manual insertion through form views, generating complementary data in other associated tables.
+Each class have a SQL query to get module data in OpenERP 7 database. When it has all necessary attributes data, matches them to the respective fields in Odoo 8 module, executing on background all secondary actions associated to data processing, like a manual insertion through form views, generating complementary data in other associated tables.
 
 Migration scripts are executed running the following command from console:
+
 `/path-to/odoo/bin/odoo.py < command > -c /path-to/openerp-server.conf`
 
 Available command in suggested order of execution:
