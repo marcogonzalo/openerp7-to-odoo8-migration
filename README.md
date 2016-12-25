@@ -3,9 +3,10 @@
 # Módulo para migrar de OpenERP 7 a Odoo 8
 Este es un módulo que yo he desarrollado para migrar una base de datos en OpenERP 7 a Odoo 8. No es una herramienta de migración automatizada sino un conjunto de _scripts_ a ejecutar para tal fin.
 
-# Instalación
+## Instalación
 Este módulo no requiere instalación. Sólo debe descargarse en el directorio de _addons_ del proyecto en Odoo 8.
 
+## Cómo usarlo
 Cada clase posee una consulta SQL para obtener la información del modelo a importar, conectándose a la base de datos anterior. Luego de obtener todos los datos asociados necesarios, se procede a asignarlos a su campo correspondiente en el modelo de la nueva versión. De este modo Odoo se encarga de ejecutar todos los procesos secundarios asociados al procesamiento de los datos y la generación de los datos complementarios en las demás tablas vinculadas.
 
 Los códigos de migración se invocan por medio de un comando desde la cónsola mediante la siguiente sintaxis: 
@@ -24,10 +25,13 @@ Ejecutar los comandos de migración en el siguiente orden:
 10. importsaleorderline (importa los productos asociados a las órdenes de ventas y presupuestos)
 11. importaccountinvoice (importa las facturas y sus líneas de factura, generando el movimiento asociado y el número de factura, cuando corresponde)
 
+
+
+
 # Module for migrate from OpenERP 7 to Odoo 8
 It is a module I have developed to migrate an OpenERP 7 database to Odoo 8. It is not an automated tool for migrations but a series of migration scripts.
 
-# Installation
+## Installation
 This module doesn't need installation. You only have to download it to your Odoo 8 addons folder.
 
 # How to use it
