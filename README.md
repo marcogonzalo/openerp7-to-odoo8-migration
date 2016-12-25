@@ -1,4 +1,4 @@
-(English version at bottom)
+_(English version at bottom)_
 
 # Módulo para migrar de OpenERP 7 a Odoo 8
 Este es un módulo que yo he desarrollado para migrar una base de datos en OpenERP 7 a Odoo 8. No es una herramienta de migración automatizada sino un conjunto de _scripts_ a ejecutar para tal fin.
@@ -10,9 +10,10 @@ Este módulo no requiere instalación. Sólo debe descargarse en el directorio d
 Cada clase posee una consulta SQL para obtener la información del modelo a importar, conectándose a la base de datos anterior. Luego de obtener todos los datos asociados necesarios, se procede a asignarlos a su campo correspondiente en el modelo de la nueva versión. De este modo Odoo se encarga de ejecutar todos los procesos secundarios asociados al procesamiento de los datos y la generación de los datos complementarios en las demás tablas vinculadas.
 
 Los códigos de migración se invocan por medio de un comando desde la cónsola mediante la siguiente sintaxis: 
-/ruta-a/odoo/bin/odoo.py < comando > -c /ruta-a/openerp-server.conf
+`/ruta-a/odoo/bin/odoo.py < comando > -c /ruta-a/openerp-server.conf`
 
 Ejecutar los comandos de migración en el siguiente orden:
+
 1. importrespartnersuperadmin (actualiza los datos del superadministrador)
 2. importrescompany (actualiza los datos de la compañía principal)
 3. importaccountfiscalyear (importa los años fiscales creados)
@@ -38,9 +39,10 @@ This module doesn't need installation. You only have to download it to your Odoo
 Each class have a SQL query to get module data in OpenERP 7 database. When it has all necessary attributes data, matches them to the respective fields in Odoo 8 module, executing on background all secondary actions associated to data processing, like an manual insertion through form views, generating complementary data in other associated tables.
 
 Migration scripts are executed running the following command from console:
-/path-to/odoo/bin/odoo.py < command > -c /path-to/openerp-server.conf
+`/path-to/odoo/bin/odoo.py < command > -c /path-to/openerp-server.conf`
 
 Available command in suggested order of execution:
+
 1. importrespartnersuperadmin (update of superadmin data)
 2. importrescompany (update of main company data)
 3. importaccountfiscalyear (import fiscal years)
