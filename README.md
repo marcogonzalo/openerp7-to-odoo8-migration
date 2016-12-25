@@ -34,7 +34,7 @@ It is a module I have developed to migrate an OpenERP 7 database to Odoo 8. It i
 ## Installation
 This module doesn't need installation. You only have to download it to your Odoo 8 addons folder.
 
-# How to use it
+## How to use it
 Each class have a SQL query to get module data in OpenERP 7 database. When it has all necessary attributes data, matches them to the respective fields in Odoo 8 module, executing on background all secondary actions associated to data processing, like an manual insertion through form views, generating complementary data in other associated tables.
 
 Migration scripts are executed running the following command from console:
